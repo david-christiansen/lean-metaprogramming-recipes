@@ -41,7 +41,7 @@ def savedLean : CodeBlockExpanderOf InlineLean.LeanBlockConfig
 /--
 An import of some other module, to be located in the saved code. Not rendered.
 -/
-@[code_block]
+@[code_block savedImport]
 def savedImport : CodeBlockExpanderOf Unit
   | (), code => do
     ``(Block.other (Block.savedImport $(quote (← getFileName)) $(quote (code.getString))) #[])
@@ -49,7 +49,7 @@ def savedImport : CodeBlockExpanderOf Unit
 /--
 Comments to be added as module docstrings to the examples file.
 -/
-@[code_block]
+@[code_block savedLean]
 def savedComment : CodeBlockExpanderOf Unit
   | (), code => do
     let str := code.getString.trimAsciiEnd.copy
