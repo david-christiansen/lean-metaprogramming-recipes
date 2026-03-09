@@ -9,4 +9,4 @@ open Cookbook
 
 set_option pp.rawOnError true
 
-#doc (Manual) "Appending" =>
+#doc (Manual) "Appending to a File" =>
