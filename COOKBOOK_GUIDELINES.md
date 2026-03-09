@@ -9,7 +9,6 @@ Since we contain both programming and metaprogramming recipes, we name the repos
 The cookbook is organized into a hierarchy of chapters and recipes:
 
 - **Main Entry**: `Cookbook.lean` is the front page.
-- **Chapter Aggregator**: `Cookbook/Chapters.lean` manages the list of all chapters and the index.
 - **Chapter Parent Files**: Located in `Cookbook/` (e.g., `Syntax.lean`, `Expressions.lean`). These define the chapter title and include individual recipes.
 - **Recipes**: Individual Lean files located in subdirectories (e.g., `Cookbook/Syntax/Commands.lean`).
 
@@ -73,6 +72,8 @@ Please go through the [Example.lean](./Cookbook/Example.lean) recipe for a templ
 lake build lean-cookbook
 lake exe lean-cookbook
 ```
+
+To see what the recipe and cookbook will look like, you can go to `lean-metaprogramming-recipes/_out/html-multi/index.html` (you should have it locally) after running the above command, and check the html file to see how it looks. The `html-multi` directory contains the output of the documentation build, and you can traverse it to see html of individual recipes and chapters as well.
 
 - No AI Slop. Please write the content yourself. Since this is meant for you to write code easily, the more AI Slop there is with complicated jargon and less precise explanations, the less useful it will be. If you need help, ask in discussions or reach out on discusssions.
 
