@@ -79,11 +79,21 @@ where
         for b in di.desc do block b
     | .para .. | .code .. => pure ()
 
+def customCodeCss : CssFile where
+  filename := "custom-code.css"
+  contents :=
+    r#" :root {
+  --verso-code-keyword-color: red;
+  --verso-code-const-color: purple;
+  --verso-code-var-color: brown;
+}
+"#
 
 def config : RenderConfig where
   emitTeX := false
   emitHtmlSingle := .no
   emitHtmlMulti := .immediately
   htmlDepth := 2
+  extraCssFiles := {customCodeCss}
 
 def main := manualMain (%doc Cookbook) (extraSteps := [buildExercises]) (config := config)
